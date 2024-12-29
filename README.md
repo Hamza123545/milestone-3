@@ -1,37 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A minimalistic e-commerce web app built with Next.js, offering: Dynamic Products Display: Real-time product data fetched via API integration. Add to Cart: Easily add products to the cart and view a summary. Static Checkout Page: Simple and intuitive for finalizing purchases.
 
-## Getting Started
+E-Commerce Web Application (Next.js)
 
-First, run the development server:
+This project is a fully functional e-commerce web application built using Next.js, designed to provide a seamless and intuitive shopping experience. Key features include:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Dynamic Product Listing: Products are dynamically fetched using API integration, ensuring the application displays up-to-date information about inventory, pricing, and product details.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Add to Cart Functionality: Users can add items to their cart with a single click. The cart provides a detailed summary, including item quantities and total costs, enhancing user convenience and transparency.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Static Checkout Page: A clean and straightforward static checkout page enables users to review their orders and finalize their purchases effortlessly. The page is designed for ease of use, ensuring smooth navigation for customers.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Wishlist Page: Users can save their favorite products to a wishlist for future reference, allowing them to shop at their own pace and revisit preferred items later.
 
-## Learn More
+The application leverages the powerful features of Next.js, such as server-side rendering (SSR) and static site generation (SSG), to optimize performance and provide a fast, responsive user experience. The modular structure ensures scalability and maintainability, making it ideal for future enhancements or additional features.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-"# nextjs-milestone-3" 
+This project demonstrates the ability to build a modern e-commerce platform with essential functionality, efficient API usage, and a user-friendly interface, showcasing a solid understanding of Next.js and front-end development principles.
