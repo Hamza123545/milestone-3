@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Cart() {
-  const { cart, removeFromCart, clearCart } = useCart();
+  const { cart, removeFromCart, clearCart, updateQuantity } = useCart();  // Assuming updateQuantity is available in context
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -19,6 +19,16 @@ export default function Cart() {
   const handleClearCart = () => {
     clearCart();
     toast.success('Cart cleared');
+  };
+
+  const handleIncrement = (id: number) => {
+    updateQuantity(id, 'increment');
+    toast.success('Item quantity increased');
+  };
+
+  const handleDecrement = (id: number) => {
+    updateQuantity(id, 'decrement');
+    toast.success('Item quantity decreased');
   };
 
   return (
@@ -65,7 +75,23 @@ export default function Cart() {
                       </div>
                     </td>
                     <td className="px-6 py-4 text-gray-600">${item.price.toFixed(2)}</td>
-                    <td className="px-6 py-4 text-gray-600">{item.quantity}</td>
+                    <td className="px-6 py-4 text-gray-600">
+                      <div className="flex items-center space-x-4">
+                        <button
+                          onClick={() => handleDecrement(item.id)}
+                          className="px-3 py-1 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition duration-300"
+                        >
+                          -
+                        </button>
+                        <span className="text-gray-800 font-medium">{item.quantity}</span>
+                        <button
+                          onClick={() => handleIncrement(item.id)}
+                          className="px-3 py-1 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition duration-300"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </td>
                     <td className="px-6 py-4 text-gray-600">${(item.price * item.quantity).toFixed(2)}</td>
                     <td className="px-6 py-4">
                       <button
@@ -92,12 +118,12 @@ export default function Cart() {
             </div>
           </div>
           <div className="text-center">
-          <Link
-  href="/checkout"
-  className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-3 rounded-full shadow-md text-lg font-semibold hover:shadow-lg hover:from-yellow-500 hover:to-yellow-700 transition duration-300"
->
-  Proceed to Checkout
-</Link>
+            <Link
+              href="/checkout"
+              className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-white px-8 py-3 rounded-full shadow-md text-lg font-semibold hover:shadow-lg hover:from-yellow-500 hover:to-yellow-700 transition duration-300"
+            >
+              Proceed to Checkout
+            </Link>
           </div>
         </>
       )}
