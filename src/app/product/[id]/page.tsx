@@ -6,7 +6,7 @@ import WishlistButton from '@/components/WishlistButton'
 import { Product } from '@/types'
 
 async function getProduct(id: string): Promise<Product | null> {
-  const res = await fetch(`http://localhost:3000/api/products`)
+  const res = await fetch('/api/products');
   if (!res.ok) {
     throw new Error('Failed to fetch products')
   }
