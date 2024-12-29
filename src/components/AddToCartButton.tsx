@@ -16,11 +16,10 @@ export default function AddToCartButton({ product }: { product: Product }) {
   return (
     <button
       onClick={handleAddToCart}
-      className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+      className="flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white rounded-md hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 transition-colors duration-300"
     >
       <ShoppingCart className="w-5 h-5 mr-2" />
       Add to Cart
     </button>
   )
 }
-
